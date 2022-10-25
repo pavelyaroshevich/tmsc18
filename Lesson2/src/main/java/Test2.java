@@ -1,7 +1,0 @@
-public class Test2 {
-    public static void main(String[] args) {
-        int value;
-        String Name = "Привет";
-        System.out.println(Name);
-    }
-}
