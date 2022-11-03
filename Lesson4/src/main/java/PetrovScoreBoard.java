@@ -11,8 +11,7 @@ public class PetrovScoreBoard {
 // далее оно должно выводиться на экран (для Петрова) и на следующей строке (для сотрудниц) должна
 // выводиться фраза о количестве полных часов, содержащихся в n секундах.
     public static void main(String[] args) {
-        int[] nums = new int[28801];
-        int random = new Random().nextInt(nums.length);
+        int random = new Random().nextInt(28800);
         System.out.println("До конца рабочего дня осталось " + random + " секунд!");
         if (random > 25200) {
             System.out.println("До конца рабочего дня осталось 8 часов!");
