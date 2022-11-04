@@ -16,11 +16,9 @@ public class ModuleValue {
         int num3 = scanner.nextInt();
         int[] array = {Math.abs(num1), Math.abs(num2), Math.abs(num3)};
         int min = array[0];
-        for (int index = 0; index < array.length; index++) {
-            if (min < array[index]) {
-
-            } else {
-                min = array[index];
+        for (int index : array) {
+            if (min > index) {
+                min = index;
             }
         }
         System.out.println("Наименьшее число по модулю - " + min);

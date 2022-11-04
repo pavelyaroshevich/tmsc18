@@ -16,13 +16,13 @@ public class DataTypes {
 
     public static void main(String[] args) {
         System.out.println("          byte\tshort\tchar\tint \tlong\tfloat\tdouble\tboolean");
-        System.out.println("byte\t\tт\tня\t\tя\t\tня\t\tня\t\tня\t\tня\t\tx");
-        System.out.println("short\t\tя\tт\t\tя\t\tня\t\tня\t\tня\t\tня\t\tx");
-        System.out.println("char\t\tя\tя\t\tт\t\tня\t\tня\t\tня\t\tня\t\tx");
-        System.out.println("int\t\t\tя\tя\t\tя\t\tт\t\tня\t\tня\t\tня\t\tx");
-        System.out.println("long\t\tя\tя\t\tя\t\tя\t\tт\t\tня\t\tня\t\tx");
-        System.out.println("float\t\tя\tя\t\tя\t\tя\t\tя\t\tт\t\tня\t\tx");
-        System.out.println("double\t\tя\tя\t\tя\t\tя\t\tя\t\tя\t\tт\t\tx");
-        System.out.println("boolean\t\tх\tх\t\tх\t\tх\t\tх\t\tх\t\tх\t\tт");
+        System.out.println("byte \t\t т \t ня \t я \t\t ня \t ня \t ня \t ня \t x ");
+        System.out.println("short \t\t я\t т \t\t я \t\t ня \t ня \t ня \t ня \t x");
+        System.out.println("char \t\t я \t я \t\t т \t\t ня \t ня \t ня \t ня \t x");
+        System.out.println("int \t\t я \t я \t\t я \t\t т \t\t ня \t ня \t ня \t x");
+        System.out.println("long \t\t я \t я \t\t я \t\t я \t\t т \t\t ня \t ня \t x");
+        System.out.println("float \t\t я \t я \t\t я \t\t я \t\t я \t\t т \t\t ня \t x");
+        System.out.println("double \t\t я \t я \t\t я \t\t я \t\t я \t\t я \t\t т \t\t x");
+        System.out.println("boolean \t х \t х \t\t х \t\t х \t\t х \t\t х \t\t х \t\t т");
     }
 }
