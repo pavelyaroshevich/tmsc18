@@ -1,96 +1,42 @@
-import java.util.Scanner;
-
+//import java.util.Scanner;
+//
 public class Task4 {
-    //4) Дано 2 числа, день и месяц рождения. Написать программу, которая определяет знак зодиака человека.
+    //    4) Дано 2 числа, день и месяц рождения. Написать программу, которая определяет знак зодиака человека.
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int day = scan.nextInt();
-        int month = scan.nextInt();
-        switch (month) {
-            case 1:
-                if (day <= 20) {
-                    System.out.println("Козерог");
-                } else {
-                    System.out.println("Водолей");
+
+        zodiac(24, 10);
+    }
+
+    private static void zodiac(int day, int month) {
+        if (day > 0 && day < 31) {
+            if (month >= 0 && month <= 12) {
+                switch (month) {
+                    case 1 -> day(day <= 20, "Козерог", "Водолей");
+                    case 2 -> day(day <= 19, "Водолей", "Рыбы");
+                    case 3 -> day(day <= 20, "Рыбы", "Овен");
+                    case 4 -> day(day <= 20, "Овен", "Телец");
+                    case 5 -> day(day <= 21, "Телец", "Близнецы");
+                    case 6 -> day(day <= 21, "Близнецы", "Рак");
+                    case 7 -> day(day <= 22, "Рак", "Лев");
+                    case 8 -> day(day <= 21, "Лев", "Дева");
+                    case 9 -> day(day <= 23, "Дева", "Весы");
+                    case 10 -> day(day <= 23, "Весы", "Скорпион");
+                    case 11 -> day(day <= 22, "Скорпион", "Стрелец");
+                    case 12 -> day(day <= 22, "Стрелец", "Козерог");
                 }
-                break;
-            case 2:
-                if (day <= 19) {
-                    System.out.println("Водолей");
-                } else {
-                    System.out.println("Рыбы");
-                }
-                break;
-            case 3:
-                if (day <= 20) {
-                    System.out.println("Рыбы");
-                } else {
-                    System.out.println("Овен");
-                }
-                break;
-            case 4:
-                if (day <= 20) {
-                    System.out.println("Овен");
-                } else {
-                    System.out.println("Телец");
-                }
-                break;
-            case 5:
-                if (day <= 21) {
-                    System.out.println("Телец");
-                } else {
-                    System.out.println("Близнецы");
-                }
-                break;
-            case 6:
-                if (day <= 21) {
-                    System.out.println("Близнецы");
-                } else {
-                    System.out.println("Рак");
-                }
-                break;
-            case 7:
-                if (day <= 22) {
-                    System.out.println("Рак");
-                } else {
-                    System.out.println("Лев");
-                }
-                break;
-            case 8:
-                if (day <= 21) {
-                    System.out.println("Лев");
-                } else {
-                    System.out.println("Дева");
-                }
-                break;
-            case 9:
-                if (day <= 23) {
-                    System.out.println("Дева");
-                } else {
-                    System.out.println("Весы");
-                }
-                break;
-            case 10:
-                if (day <= 23) {
-                    System.out.println("Весы");
-                } else {
-                    System.out.println("Скорпион");
-                }
-                break;
-            case 11:
-                if (day <= 22) {
-                    System.out.println("Скорпион");
-                } else {
-                    System.out.println("Стрелец");
-                }
-                break;
-            case 12:
-                if (day <= 22) {
-                    System.out.println("Стрелец");
-                } else {
-                    System.out.println("Козерог");
-                }
-                break;
+            } else {
+                System.out.println("Введены не верные параметры");
+            }
+        } else {
+            System.out.println("Введены не верные параметры");
+        }
+    }
+
+    private static void day(boolean x, String s1, String s2) {
+        if (x) {
+            System.out.println(s1);
+        } else {
+            System.out.println(s2);
         }
     }
 }
