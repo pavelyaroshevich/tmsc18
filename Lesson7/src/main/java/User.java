@@ -30,14 +30,14 @@ public class User {
     public String getSurname() {
         return surname;
     }
-
+    @Deprecated
     public int getAge() {
         return ++age;
     }
 
     @Override
     public String toString() {
-        return "User[" +
+        return "Пользователь[" +
                 "Возраст=" + age +
                 ", Пол='" + sex + '\'' +
                 ", Имя='" + name + '\'' +
