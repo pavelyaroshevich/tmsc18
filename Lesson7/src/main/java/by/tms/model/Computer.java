@@ -12,6 +12,10 @@ public class Computer {
     protected boolean computerBreak = false;
     protected Scanner scanner = new Scanner(System.in);
 
+    public Computer(int resourceWork) {
+        this.resourceWork = resourceWork;
+    }
+
     public Computer(double cpu, int ram, int hdd, int resourceWork) {
         this.cpu = cpu;
         this.ram = ram;

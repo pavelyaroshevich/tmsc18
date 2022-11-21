@@ -19,7 +19,13 @@ public class User {
         this.surname = surname;
     }
 
+    public User(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
     public User(int age) {
+        this(age,"Paul");
         this.age = age;
     }
 
