@@ -18,20 +18,24 @@ public class Task12 {
         int[][] mass = new int[scanner.nextInt()][scanner.nextInt()];
         for (int i = 0; i < mass.length; i++) {
             for (int j = 0; j < mass.length; j++) {
-                mass[i][j] = random.nextInt(50);
+                mass[i][j] = random.nextInt(51);
                 System.out.print(mass[i][j] + "\t");
             }
             System.out.println();
         }
+        System.out.println();
+        transpose(mass);
+    }
+    public static void transpose(int[][] mass) {
+        int[][] transposedMass = new int[mass.length][mass.length];
         for (int i = 0; i < mass.length; i++) {
             for (int j = 0; j < mass.length; j++) {
-                mass[i][j] = mass[j][i];
+                transposedMass[j][i] = mass[i][j];
             }
         }
-        System.out.println("Поменяли местами строки и столбцы");
-        for (int i = 0; i < mass.length; i++) {
-            for (int j = 0; j < mass.length; j++) {
-                System.out.print(mass[i][j] + "\t");
+        for (int i = 0; i < transposedMass.length; i++) {
+            for (int j = 0; j < transposedMass.length; j++) {
+                System.out.printf("%2d ", transposedMass[i][j]);
             }
             System.out.println();
         }

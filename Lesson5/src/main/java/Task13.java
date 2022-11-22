@@ -14,12 +14,13 @@ public class Task13 {
         int[][] mass = new int[3][3];
         for (int i = 0; i < mass.length; i++) {
             for (int j = 0; j < mass[i].length; j++) {
-                mass[i][j] = random.nextInt(100);
-                System.out.print(mass[i][j]+ " ");
+                mass[i][j] = random.nextInt(101);
+                System.out.print(mass[i][j]+ "\t");
             }
             System.out.println();
             sum += mass[i][i];
         }
+        System.out.println();
         System.out.println(sum);
     }
 }

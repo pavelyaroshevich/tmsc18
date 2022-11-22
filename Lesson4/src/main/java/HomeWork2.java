@@ -11,7 +11,7 @@ public class HomeWork2 {
         System.out.println(operation(0));
         System.out.println(calculateCountOfOddElementsInMatrix(new int[]{-2, -3, 3, 4, 5, 3}));
         countDevs(103);
-        countDevs(11);
+        countDevs(4);
         foobar(6);
         foobar(10);
         foobar(15);
@@ -90,15 +90,11 @@ public class HomeWork2 {
     public static void countDevs(int count) {
         int a = count % 10;
         int b = count % 100;
-        if (b >= 11 & b <= 19) {
+        if (a == 0 || a >= 5 || b >= 11 & b <= 19) {
             System.out.println(count + " программистов");
-        } else if (a == 0) {
-            System.out.println(count + " программистов");
-        } else if (a == 1) {
+        }  else if (a == 1) {
             System.out.println(count + " программист");
-        } else if (a >= 5) {
-            System.out.println(count + " программистов");
-        } else if (a < 5) {
+        }  else if (a < 5) {
             System.out.println(count + " программиста");
         }
     }
@@ -117,14 +113,14 @@ public class HomeWork2 {
         } else if (number % 5 == 0) {
             System.out.println("bar");
         } else {
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 
     /**
      * Задача со звездочкой!
      * Метод должен печатать все простые числа <1000,
-     * что такое просто число (https://www.webmath.ru/poleznoe/formules_18_5.php)
+     * что такое просто число (<a href="https://www.webmath.ru/poleznoe/formules_18_5.php">...</a>)
      */
     public static void printPrimeNumbers() {
         // 

@@ -8,7 +8,7 @@ public class Task10 {
 
     private static void findMax() {
         int[] mass = {4, 5, 0, 23, 77, 0, 8, 9, 101, 2};
-        int max = mass[0];
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < mass.length; i++) {
             if (mass[i] > max) {
                 max = mass[i];
