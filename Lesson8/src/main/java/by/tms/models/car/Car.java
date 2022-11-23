@@ -59,14 +59,6 @@ public class Car {
         System.out.println(tank.getCurrentVolume());
     }
 
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public Tank getTank() {
-        return tank;
-    }
-
     public int getDistance() {
         return distance;
     }

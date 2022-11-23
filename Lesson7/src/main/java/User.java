@@ -28,8 +28,7 @@ public class User {
         this(age,"Paul");
         this.age = age;
     }
-
-    public String getName() {
+public String getName() {
         return name;
     }
 

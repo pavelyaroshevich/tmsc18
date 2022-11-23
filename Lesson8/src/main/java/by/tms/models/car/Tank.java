@@ -21,8 +21,4 @@ public class Tank {
     public int getCurrentVolume() {
         return currentVolume;
     }
-
-    public void setCurrentVolume(int currentVolume) {
-        this.currentVolume = currentVolume;
-    }
 }

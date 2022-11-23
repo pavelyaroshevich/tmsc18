@@ -22,12 +22,4 @@ public class Engine {
             System.out.println("Что-то не так");
         }
     }
-
-    public String getType() {
-        return type;
-    }
-
-    public double getEngineSize() {
-        return engineSize;
-    }
 }
