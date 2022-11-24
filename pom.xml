@@ -35,6 +35,12 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <modules>
@@ -45,5 +51,6 @@
         <module>Lesson5</module>
         <module>Lesson6</module>
         <module>Lesson7</module>
+        <module>Lesson8</module>
     </modules>
 </project>

@@ -5,12 +5,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Computer {
-    public double cpu;
-    public int ram;
-    public int hdd;
-    public int resourceWork;
-    protected boolean computerBreak = false;
-    protected Scanner scanner = new Scanner(System.in);
+    private double cpu;
+    private int ram;
+    private int hdd;
+    private int resourceWork;
+    private boolean computerBreak;
+    private Scanner scanner = new Scanner(System.in);
 
     public Computer(double cpu, int ram, int hdd, int resourceWork) {
         this.cpu = cpu;
@@ -38,8 +38,8 @@ public class Computer {
         }
     }
 
-    public void on() {
-        if (!computerBreak) {
+    private void on() {
+        if (!computerBreak && resourceWork > 0) {
             System.out.println("Внимание! Введите 0 или 1");
             Random random = new Random();
             if (scanner.nextInt() == random.nextInt(2)) {
@@ -50,13 +50,13 @@ public class Computer {
                 computerBreak = true;
                 onOrOff();
             }
-        } else {
+        } else if (computerBreak) {
             System.out.println("Компьютер сгорел");
         }
     }
 
-    public void off() {
-        if (computerBreak && resourceWork <= 0) {
+    private void off() {
+        if (computerBreak) {
             System.out.println("Компьютер сгорел");
         } else {
             System.out.println("Выключение компьютера");

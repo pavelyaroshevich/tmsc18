@@ -16,15 +16,15 @@ public class DataTypes {
 
     public static void main(String[] args) {
         String s1 = """
-                          byte\tshort\tchar\tint \tlong\tfloat\tdouble\tboolean
-                          byte \t\t т \t ня \t я \t\t ня \t ня \t ня \t ня \t x 
-                          short \t я\t т \t\t я \t\t ня \t ня \t ня \t ня \t x
-                          char \t\t я \t я \t\t т \t\t ня \t ня \t ня \t ня \t x
-                          int \t\t я \t я \t\t я \t\t т \t\t ня \t ня \t ня \t x
-                          long \t\t я \t я \t\t я \t\t я \t\t т \t\t ня \t ня \t x
-                          float \t я \t я \t\t я \t\t я \t\t я \t\t т \t\t ня \t x
-                          double \t я \t я \t\t я \t\t я \t\t я \t\t я \t\t т \t\t x
-                          boolean \t х \t х \t\t х \t\t х \t\t х \t\t х \t\t х \t\t т
+                                 byte  short   char    int     long    float   double  boolean
+                          byte     т    ня      я      ня       ня       ня     ня       x 
+                          short    я    т       я      ня       ня       ня     ня       x
+                          char     я    я       т      ня       ня       ня     ня       x
+                          int      я    я       я      т        ня       ня     ня       x
+                          long     я    я       я      я        т        ня     ня       x
+                          float    я    я       я      я        я        т      ня       x
+                          double   я    я       я      я        я        я      т        x
+                          boolean  х    х       х      х        х        х      х        т
                           
                 """;
         System.out.println(s1);
