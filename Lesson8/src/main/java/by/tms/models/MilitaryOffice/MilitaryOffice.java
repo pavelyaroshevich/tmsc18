@@ -27,17 +27,17 @@ public class MilitaryOffice {
     }
 
     public void printOne() {
-        for (int i = 0; i < personRegistry.getMass().length; i++) {
-            if (personRegistry.getMass()[i].getAge() >= 18 && personRegistry.getMass()[i].getAge() <= 27 && personRegistry.getMass()[i].getSex().equals("M")) {
-                System.out.println(personRegistry.getMass()[i].getName());
+        for (int i = 0; i < personRegistry.getPersons().length; i++) {
+            if (personRegistry.getPersons()[i].getAge() >= 18 && personRegistry.getPersons()[i].getAge() <= 27 && personRegistry.getPersons()[i].getSex().equals("M")) {
+                System.out.println(personRegistry.getPersons()[i].getName());
             }
         }
     }
 
     public void printTwo() {
         int count = 0;
-        for (int i = 0; i < personRegistry.getMass().length; i++) {
-            if (personRegistry.getMass()[i].getAge() >= 18 && personRegistry.getMass()[i].getAge() <= 27 && personRegistry.getMass()[i].getAddress().getCity().equals("Minsk")) {
+        for (int i = 0; i < personRegistry.getPersons().length; i++) {
+            if (personRegistry.getPersons()[i].getAge() >= 18 && personRegistry.getPersons()[i].getAge() <= 27 && personRegistry.getPersons()[i].getAddress().getCity().equals("Minsk")) {
                 count++;
             }
         }
@@ -46,8 +46,8 @@ public class MilitaryOffice {
 
     public void printThree() {
         int count = 0;
-        for (int i = 0; i < personRegistry.getMass().length; i++) {
-            if (personRegistry.getMass()[i].getAge() >= 25 && personRegistry.getMass()[i].getAge() <= 27) {
+        for (int i = 0; i < personRegistry.getPersons().length; i++) {
+            if (personRegistry.getPersons()[i].getAge() >= 25 && personRegistry.getPersons()[i].getAge() <= 27) {
                 count++;
             }
         }
@@ -56,8 +56,8 @@ public class MilitaryOffice {
 
     public void printFour() {
         int count = 0;
-        for (int i = 0; i < personRegistry.getMass().length; i++) {
-            if (personRegistry.getMass()[i].getName().equals("Aleksandr")) {
+        for (int i = 0; i < personRegistry.getPersons().length; i++) {
+            if (personRegistry.getPersons()[i].getName().equals("Aleksandr")) {
                 count++;
             }
         }

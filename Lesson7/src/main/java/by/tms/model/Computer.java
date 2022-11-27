@@ -48,9 +48,8 @@ public class Computer {
             } else {
                 System.out.println("Компьютер сгорел");
                 computerBreak = true;
-                onOrOff();
             }
-        } else if (computerBreak) {
+        } else {
             System.out.println("Компьютер сгорел");
         }
     }

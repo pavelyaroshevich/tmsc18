@@ -1,13 +1,13 @@
 package by.tms.models.MilitaryOffice;
 
 public class PersonRegistry {
-private Person mass[];
+    private Person persons[];
 
-    public Person[] getMass() {
-        return mass;
+    public Person[] getPersons() {
+        return persons;
     }
 
-    public PersonRegistry(Person[] mass) {
-        this.mass = mass;
+    public PersonRegistry(Person[] persons) {
+        this.persons = persons;
     }
 }
