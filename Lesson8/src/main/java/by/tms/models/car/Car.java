@@ -2,9 +2,7 @@ package by.tms.models.car;
 
 public class Car {
     private Engine engine;
-    protected Tank tank;
-    private String model;
-    private String yearOfIssue;
+    private Tank tank;
     private int distance;
 
     public Car(Engine engine, Tank tank) {
