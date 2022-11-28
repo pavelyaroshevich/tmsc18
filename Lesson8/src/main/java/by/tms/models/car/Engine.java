@@ -3,7 +3,7 @@ package by.tms.models.car;
 public class Engine {
     private final String type;
     private final double engineSize;
-    boolean condition; // false - выключен
+    private boolean condition; // false - выключен
 
     public Engine(String type, double engineSize) {
         this.type = type;
@@ -21,5 +21,13 @@ public class Engine {
         } else {
             System.out.println("Что-то не так");
         }
+    }
+
+    public void setCondition(boolean condition) {
+        this.condition = condition;
+    }
+
+    public boolean isCondition() {
+        return condition;
     }
 }
