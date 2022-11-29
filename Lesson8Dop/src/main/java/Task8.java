@@ -19,6 +19,7 @@ public class Task8 {
             }
         }
         System.out.println(Arrays.deepToString(array));
+        System.out.println("Введите число, на которое хотите увеличить каждый элемент");
         int value = scanner.nextInt();
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {

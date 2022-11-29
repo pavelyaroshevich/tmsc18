@@ -11,11 +11,11 @@ public class Car {
     }
 
     public void startCar() {
-        if (!engine.condition && tank.getCurrentVolume() > 0) {
+        if (!engine.isCondition() && tank.getCurrentVolume() > 0) {
             engine.startEngine();
             System.out.println("Машина заведена");
-            engine.condition = true;
-        } else if (engine.condition) {
+            engine.setCondition(true);
+        } else if (engine.isCondition()) {
             System.out.println("Машина была заведена ранее");
         } else {
             System.out.println("Нет топлива");
@@ -23,7 +23,7 @@ public class Car {
     }
 
     public void drivingCar() {
-        if (engine.condition) {
+        if (engine.isCondition()) {
             System.out.println("Машина поехала");
             distance += 5;
             tank.currentVolume -= 4;
@@ -33,7 +33,7 @@ public class Car {
     }
 
     public void stopCar() {
-        if (engine.condition) {
+        if (engine.isCondition()) {
             System.out.println("Глушим машину");
         } else {
             System.out.println("Машина заглохла ранее или не была заведена");
