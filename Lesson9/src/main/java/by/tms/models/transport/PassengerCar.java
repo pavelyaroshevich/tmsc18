@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.models.transport;
 
 public class PassengerCar extends GroundTransport {
     private String bodyType;
@@ -13,10 +13,7 @@ public class PassengerCar extends GroundTransport {
     }
 
     public String getInfo() {
-        return "Мощность - " + getPower() +
-                ", Максимальная скорость - " + getMaxSpeed() +
-                ", Вес - " + getWeight() +
-                ", Модель - " + getName() +
+        return toString() +
                 ", Количество колес - " + getCountOfWheels() +
                 ", Расход топлива - " + getFuelConsumption() +
                 ", Тип кузова - " + getBodyType() +

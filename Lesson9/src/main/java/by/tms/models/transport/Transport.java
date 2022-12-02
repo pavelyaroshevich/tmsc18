@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.models.transport;
 
 public class Transport {
     private int power;
@@ -15,6 +15,14 @@ public class Transport {
         this.maxSpeed = maxSpeed;
         this.weight = weight;
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Мощность - " + power +
+                ", Максимальная скорость - " + maxSpeed +
+                ", Вес - " + weight +
+                ", Модель - " + name + ", ";
     }
 
     public int getPower() {

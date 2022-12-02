@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.models.transport;
 
 public class CargoCar extends GroundTransport {
     private int loadCapacity;
@@ -9,9 +9,7 @@ public class CargoCar extends GroundTransport {
     }
 
     public String getInfo() {
-        return "Мощность - " + getPower() +
-                ", Максимальная скорость - " + getMaxSpeed() +
-                ", Вес - " + getWeight() +
+        return toString() +
                 ", Количество колес - " + getCountOfWheels() +
                 ", Расход топлива - " + getFuelConsumption() +
                 ", Грузоподъемность - " + getLoadCapacity() +

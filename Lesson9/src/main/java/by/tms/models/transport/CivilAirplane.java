@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.models.transport;
 
 public class CivilAirplane extends AirTransport {
     private int maxCountOfPassenger;
@@ -11,10 +11,7 @@ public class CivilAirplane extends AirTransport {
     }
 
     public String getInfo() {
-        return "Мощность - " + getPower() +
-                ", Максимальная скорость - " + getMaxSpeed() +
-                ", Вес - " + getWeight() +
-                ", Модель - " + getName() +
+        return toString() +
                 ", Размах крыльев - " + getWingspan() +
                 ", Минимальная длина взлётно-посадочной полосы для взлёта - " + getMinStripLength() +
                 ", Наличие бизнес-класса - " + isHaveBusinesses() +

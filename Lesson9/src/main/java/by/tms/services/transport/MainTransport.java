@@ -1,9 +1,9 @@
-package by.tms.services;
+package by.tms.services.transport;
 
-import by.tms.models.CargoCar;
-import by.tms.models.CivilAirplane;
-import by.tms.models.MilitaryAirplane;
-import by.tms.models.PassengerCar;
+import by.tms.models.transport.CargoCar;
+import by.tms.models.transport.CivilAirplane;
+import by.tms.models.transport.MilitaryAirplane;
+import by.tms.models.transport.PassengerCar;
 
 public class MainTransport {
     public static void main(String[] args) {

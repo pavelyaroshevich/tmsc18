@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.models.transport;
 
 public class AirTransport extends Transport {
     private int wingspan;
