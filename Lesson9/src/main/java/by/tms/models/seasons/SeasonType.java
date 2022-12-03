@@ -1,20 +1,26 @@
 package by.tms.models.seasons;
 
 public enum SeasonType {
-    ЗИМА(-10, "я люблю зиму"), ВЕСНА(10, "я люблю весну"), ЛЕТО(25, "я люблю лето"), ОСЕНЬ(5, "я люблю осень");
-    private final int averageTemperature;
-    private String info;
+    ЗИМА(-10) {
+        @Override
+        public String getDescription() {
+            return "Холодное время года";
+        }
+    },
+    ВЕСНА(10),
+    ЛЕТО(25),
+    ОСЕНЬ(5);
+    private int averageTemperature;
 
-    SeasonType(int averageTemperature, String info) {
+    public String getDescription() {
+        return "Теплое время года";
+    }
+
+    SeasonType(int averageTemperature) {
         this.averageTemperature = averageTemperature;
-        this.info = info;
     }
 
     public int getAverageTemperature() {
         return averageTemperature;
-    }
-
-    public String getInfo() {
-        return info;
     }
 }

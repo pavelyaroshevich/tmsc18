@@ -1,16 +1,23 @@
 package by.tms.models.seasons;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Season {
     private SeasonType seasonType;
-    private int favoriteSeason;
-    private String info;
+    private SeasonType favoriteSeason;
 
-    public void getFavoriteSeason(SeasonType seasonType) {
+    public void myFavoriteSeason() {
+        System.out.println("Моя любимая пора года - " + favoriteSeason);
+    }
+
+    public void getInfoAboutSeason(SeasonType seasonType) {
         switch (seasonType) {
             case ЗИМА -> System.out.println("Я люблю зиму");
             case ВЕСНА -> System.out.println("Я люблю весну");
@@ -18,13 +25,4 @@ public class Season {
             case ОСЕНЬ -> System.out.println("Я люблю осень");
         }
     }
-
-    public void getDescription(SeasonType seasonType) {
-        if (seasonType == SeasonType.ЗИМА) {
-            System.out.println("Холодное время года");
-        } else {
-            System.out.println("Теплое время года");
-        }
-    }
-
 }
