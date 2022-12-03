@@ -10,10 +10,6 @@ public enum SeasonType {
         this.info = info;
     }
 
-    SeasonType(int averageTemperature) {
-        this.averageTemperature = averageTemperature;
-    }
-
     public int getAverageTemperature() {
         return averageTemperature;
     }
