@@ -1,6 +1,6 @@
 package by.tms.models.transport;
 
-public class Transport {
+abstract class Transport {
     private int power;
     private int maxSpeed;
     private int weight;
