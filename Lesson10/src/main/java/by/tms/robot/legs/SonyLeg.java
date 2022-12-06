@@ -1,4 +1,4 @@
-package by.tms.models.robot;
+package by.tms.robot.legs;
 
 public class SonyLeg implements ILeg {
     private int price;

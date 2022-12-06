@@ -1,19 +1,20 @@
-package by.tms.models.robot;
+package by.tms.robot.legs;
 
-public class ToshibaLeg implements ILeg {
+public class SamsungLeg implements ILeg {
     private int price;
 
-    public ToshibaLeg(int price) {
+    public SamsungLeg(int price) {
         this.price = price;
     }
 
     @Override
     public void step() {
-        System.out.println("Сделал шаг Toshiba");
+        System.out.println("Сделал шаг Samsung");
     }
 
     @Override
     public int getPrice() {
         return price;
     }
+
 }

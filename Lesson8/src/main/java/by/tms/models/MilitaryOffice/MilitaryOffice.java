@@ -22,10 +22,6 @@ public class MilitaryOffice {
         this.personRegistry = personRegistry;
     }
 
-    public PersonRegistry getPersonRegistry() {
-        return personRegistry;
-    }
-
     public void printOne() {
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
             if (personRegistry.getPersons()[i].getAge() >= 18 && personRegistry.getPersons()[i].getAge() <= 27 && personRegistry.getPersons()[i].getSex().equals("M")) {

@@ -1,15 +1,15 @@
-package by.tms.models.robot;
+package by.tms.robot.head;
 
-public class ToshibaHead implements IHead {
+public class SonyHead implements IHead {
     private int price;
 
-    public ToshibaHead(int price) {
+    public SonyHead(int price) {
         this.price = price;
     }
 
     @Override
     public void speak() {
-        System.out.println("Говорит голова Toshiba");
+        System.out.println("Говорит голова Sony");
     }
 
     @Override

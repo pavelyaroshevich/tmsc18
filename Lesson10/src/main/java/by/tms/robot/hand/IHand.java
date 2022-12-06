@@ -1,4 +1,4 @@
-package by.tms.models.robot;
+package by.tms.robot.hand;
 
 public interface IHand {
     void upHand();

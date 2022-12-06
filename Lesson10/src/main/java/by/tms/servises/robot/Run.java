@@ -1,6 +1,15 @@
 package by.tms.servises.robot;
 
 import by.tms.models.robot.*;
+import by.tms.robot.hand.SamsungHand;
+import by.tms.robot.hand.SonyHand;
+import by.tms.robot.hand.ToshibaHand;
+import by.tms.robot.head.SamsungHead;
+import by.tms.robot.head.SonyHead;
+import by.tms.robot.head.ToshibaHead;
+import by.tms.robot.legs.SamsungLeg;
+import by.tms.robot.legs.SonyLeg;
+import by.tms.robot.legs.ToshibaLeg;
 
 public class Run {
     public static void main(String[] args) {
