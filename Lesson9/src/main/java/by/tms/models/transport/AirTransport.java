@@ -1,6 +1,6 @@
 package by.tms.models.transport;
 
-public class AirTransport extends Transport {
+abstract class AirTransport extends Transport {
     private int wingspan;
     private int minStripLength;
 

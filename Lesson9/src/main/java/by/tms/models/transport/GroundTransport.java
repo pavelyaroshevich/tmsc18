@@ -1,6 +1,6 @@
 package by.tms.models.transport;
 
-public class GroundTransport extends Transport {
+abstract class GroundTransport extends Transport {
 
     private int countOfWheels;
     private int fuelConsumption;

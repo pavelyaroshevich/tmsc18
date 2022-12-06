@@ -3,6 +3,10 @@ package by.tms.models.flowers;
 public class Bouquet {
     private Flower[] flowers;
 
+    public Bouquet(Flower[] flowers) {
+        this.flowers = flowers;
+    }
+
     public void calculatePrice() {
         int price = 0;
         for (int i = 0; i < flowers.length; i++) {
@@ -17,10 +21,6 @@ public class Bouquet {
             System.out.print(flowers[i].getName() + " стоимостью  - " + flowers[i].getCost() + ", ");
         }
         System.out.println();
-    }
-
-    public Bouquet(Flower[] flowers) {
-        this.flowers = flowers;
     }
 
     public Flower[] getFlowers() {
