@@ -1,16 +1,11 @@
 package by.tms.models.MilitaryOffice;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public class Address {
     private String city;
     private String country;
-
-    public Address(String city, String country) {
-        this.city = city;
-        this.country = country;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
 }

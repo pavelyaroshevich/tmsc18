@@ -1,4 +1,4 @@
-package by.tms.models.robot;
+package by.tms.robot.hand;
 
 public class SonyHand implements IHand {
     private int price;

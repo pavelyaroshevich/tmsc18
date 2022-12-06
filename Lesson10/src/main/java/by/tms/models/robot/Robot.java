@@ -1,5 +1,9 @@
 package by.tms.models.robot;
 
+import by.tms.robot.hand.IHand;
+import by.tms.robot.head.IHead;
+import by.tms.robot.legs.ILeg;
+
 public class Robot implements IRobot {
     private IHead head;
     private IHand hand;

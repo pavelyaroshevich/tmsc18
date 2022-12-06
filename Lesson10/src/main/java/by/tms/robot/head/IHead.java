@@ -1,4 +1,4 @@
-package by.tms.models.robot;
+package by.tms.robot.head;
 
 public interface IHead {
     void speak();
