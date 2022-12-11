@@ -23,7 +23,4 @@ public class Bouquet {
         System.out.println();
     }
 
-    public Flower[] getFlowers() {
-        return flowers;
-    }
 }

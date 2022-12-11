@@ -1,4 +1,4 @@
-package by.tms.servises.robot;
+package by.tms.services.robot;
 
 import by.tms.models.robot.*;
 import by.tms.robot.hand.SamsungHand;
