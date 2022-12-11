@@ -1,15 +1,17 @@
 package by.tms.services.clothes;
 
-import by.tms.models.clothes.ClothesType;
-import by.tms.models.clothes.Studio;
+import by.tms.models.clothes.*;
 
 import static by.tms.models.clothes.ClothesType.*;
 
 public class Main {
     public static void main(String[] args) {
         Studio studio = new Studio();
-        ClothesType[] clothesTypes = {XXS, XS, S, M, L};
-        studio.dressAMan(clothesTypes);
-        studio.dressAWoman(clothesTypes);
+        Clothes[] clothes = {new Tie(XS, 100, "Black"),
+                new Skirt(L, 50, "Yellow"),
+                new Trousers(S, 75, "White"),
+                new TeeShirt(M, 80, "Green")};
+        studio.dressAMan(clothes);
+        studio.dressAWoman(clothes);
     }
 }

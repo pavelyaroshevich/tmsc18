@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public abstract class Clothes {
-    private int size;
+    private ClothesType clothesType;
     private int price;
     private String color;
 }
