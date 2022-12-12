@@ -1,8 +1,13 @@
 package by.tms.models.figure;
 
-public class Rectangle extends Figure {
-    @Override
-    void getSquare() {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-    }
+@Getter
+@Setter
+@AllArgsConstructor
+public class Rectangle extends Figure {
+    private int length;
+    private int width;
 }

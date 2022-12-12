@@ -1,9 +1,6 @@
 package by.tms.models.clothes;
 
 public class Studio {
-    private MenClothes menClothes;
-    private WomenClothes womenClothes;
-
     public void dressAMan(Clothes[] clothes) {
         for (int i = 0; i < clothes.length; i++) {
             if (clothes[i] instanceof MenClothes) {

@@ -6,12 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Pear extends Fruits {
-    private int price = 7;
-    private static double resultWeightPear = 0;
+    private int price;
 
-    public Pear(double weight) {
+    public Pear(double weight, int price) {
         super(weight);
-        resultWeightPear += weight;
+        this.price = price;
     }
 
     @Override
@@ -20,7 +19,7 @@ public class Pear extends Fruits {
     }
 
     public double resultPricePear() {
-        return resultWeightPear * price;
+        return getWeight() * price;
     }
 
 }

@@ -32,8 +32,8 @@ public class Person implements PersonAware {
     @Override
     public void undress() {
         System.out.println(getName());
-        jacket.remove();
-        pants.remove();
-        shoes.remove();
+        jacket.takeOff();
+        pants.takeOff();
+        shoes.takeOff();
     }
 }
