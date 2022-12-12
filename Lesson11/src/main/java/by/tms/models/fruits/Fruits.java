@@ -9,7 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public abstract class Fruits {
     private double weight;
-    public static double resultWeight = 0;
 
     public static void printManufactureInfo() {
         System.out.println("Made in Belarus");

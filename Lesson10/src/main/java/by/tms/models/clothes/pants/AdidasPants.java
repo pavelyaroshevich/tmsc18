@@ -7,7 +7,7 @@ public class AdidasPants implements Pants {
     }
 
     @Override
-    public void remove() {
+    public void takeOff() {
         System.out.println("Снял штаны Adidas.");
     }
 }

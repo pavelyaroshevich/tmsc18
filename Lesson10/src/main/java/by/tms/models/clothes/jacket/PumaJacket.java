@@ -7,7 +7,7 @@ public class PumaJacket implements Jacket {
     }
 
     @Override
-    public void remove() {
+    public void takeOff() {
         System.out.println("Снял куртку Puma.");
     }
 }
