@@ -1,5 +1,13 @@
 package by.tms.models.figure;
 
-public class Line extends Figure {
+import lombok.experimental.SuperBuilder;
 
+@SuperBuilder
+public class Line extends Figure {
+    private double length;
+
+    @Override
+    public FigureType getType() {
+        return FigureType.LINE;
+    }
 }

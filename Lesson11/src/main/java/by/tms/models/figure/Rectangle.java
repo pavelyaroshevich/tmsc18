@@ -1,13 +1,19 @@
 package by.tms.models.figure;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-@Getter
-@Setter
-@AllArgsConstructor
-public class Rectangle extends Figure {
+@SuperBuilder
+public class Rectangle extends Figure implements FigureAware {
     private int length;
     private int width;
+
+    @Override
+    public FigureType getType() {
+        return FigureType.RECTANGLE;
+    }
+
+    @Override
+    public double getSquare() {
+        return length * width;
+    }
 }
