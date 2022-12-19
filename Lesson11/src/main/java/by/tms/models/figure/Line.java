@@ -10,4 +10,5 @@ public class Line extends Figure {
     public FigureType getType() {
         return FigureType.LINE;
     }
+
 }

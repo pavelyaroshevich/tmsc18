@@ -10,8 +10,8 @@ import static by.tms.models.instruments.InstrumentsAware.*;
 public class Main {
     public static void main(String[] args) {
         InstrumentsAware[] instrumentsAwares = {createInstrument(TypeOfInstruments.GUITAR, 6), createInstrument(TypeOfInstruments.DRUMS, 10), createInstrument(TypeOfInstruments.GUITAR, 4)};
-        for (int i = 0; i < instrumentsAwares.length; i++) {
-            instrumentsAwares[i].play();
+        for (InstrumentsAware instrumentsAware : instrumentsAwares) {
+            instrumentsAware.play();
         }
     }
 
