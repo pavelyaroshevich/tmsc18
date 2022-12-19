@@ -1,4 +1,4 @@
-package by.tms.task1;
+package by.tms.tasks;
 
 public class Task5 {
     public static void main(String[] args) {
