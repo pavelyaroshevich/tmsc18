@@ -9,9 +9,9 @@ public class Task1 {
 //     * cab
 //     * ccab
 //     * cccab
+    public static final Pattern PATTERN = Pattern.compile("c+ab");
     public static void main(String[] args) {
         String text = "cab, ccab, cccab, cb";
-        Pattern PATTERN = Pattern.compile("c+ab");
         Matcher matcher = PATTERN.matcher(text);
         while (matcher.find()) {
             System.out.println(text.substring(matcher.start(), matcher.end()));
