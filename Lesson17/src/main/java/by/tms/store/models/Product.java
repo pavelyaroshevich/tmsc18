@@ -1,16 +1,15 @@
 package by.tms.store.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Product {
-    private int id;
+    @EqualsAndHashCode.Include
+    private Long id;
     private String name;
-    private int price;
+    private Integer price;
 }
