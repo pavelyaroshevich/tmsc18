@@ -11,13 +11,20 @@ public class Task2 {
         DayOfWeek dayOfWeek = localDate.getDayOfWeek();
         System.out.println("Today is: " + date + " - " + dayOfWeek);
         switch (dayOfWeek) {
-            case MONDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(8));
-            case TUESDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(7));
-            case WEDNESDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(6));
-            case THURSDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(5));
-            case FRIDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(4));
-            case SATURDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(3));
-            case SUNDAY -> System.out.println("The date of next TUESDAY: " + localDate.plusDays(2));
+            case MONDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.MONDAY.getValue()));
+            case TUESDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.SUNDAY.getValue()));
+            case WEDNESDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.SATURDAY.getValue()));
+            case THURSDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.FRIDAY.getValue()));
+            case FRIDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.THURSDAY.getValue()));
+            case SATURDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.WEDNESDAY.getValue()));
+            case SUNDAY ->
+                    System.out.println("The date of next TUESDAY: " + localDate.plusDays(DayOfWeek.TUESDAY.getValue()));
             default -> System.out.println("Something went wrong");
         }
     }
