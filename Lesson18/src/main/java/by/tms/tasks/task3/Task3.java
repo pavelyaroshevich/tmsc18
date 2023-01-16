@@ -1,7 +1,6 @@
 package by.tms.tasks.task3;
 
 public class Task3 {
-
     public static void chooseNum(int num) {
         if (num == 1) {
             String name = "Степан";
@@ -13,7 +12,7 @@ public class Task3 {
 
         } else if (num == 2) {
             InterfaceAware<Integer> integerInterfaceAware = integer -> {
-                int result = 1;
+                int result = 4;
                 for (int i = 1; i <= integer; i++) {
                     result = result * i;
                 }
