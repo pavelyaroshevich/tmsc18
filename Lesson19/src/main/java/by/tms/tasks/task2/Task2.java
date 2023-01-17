@@ -8,7 +8,8 @@ public class Task2 {
     public static final int COUNT_OF_INTS = 50;
 
     public static void main(String[] args) {
-        System.out.println(getRandomSet().size());
+        System.out.println("Четные числа - " + getRandomSet());
+        System.out.println("Количество четных чисел - " + getRandomSet().size());
     }
 
     private static Set<Integer> getRandomSet() {
