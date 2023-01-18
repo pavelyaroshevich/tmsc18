@@ -1,14 +1,17 @@
 package by.tms.tasks.task1;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Task1 {
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(2, 3, 4, 5, 6, 7);
-        numbers.stream()
+        Random random = new Random();
+        random.ints(50, 0, 10)
                 .map(i -> i * 2)
+                .boxed()
+                .collect(Collectors.toSet())
                 .forEach(System.out::println);
+
     }
 }
 
