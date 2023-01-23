@@ -12,7 +12,7 @@ package by.tms.models;
         --Для решения задач данного блока вам понадобятся следующие SQL команды и функции:IN.
         --Выберите из таблицы workers записи с id равным 1,2,3,5,14.
         select*from workers where id in(1,2,3,5);
-        --Выберите из таблицы workers записи с login равным'eee','bbb','zzz'.
+        --Выберите из таблицы workers записи с login равным 'eee','bbb','zzz'.
         select*from workers where login in('eee','bbb','zzz');
         --Выберите из таблицы workers записи с id равным 1,2,3,7,9,и логином,равным'user','admin','ivan'и зарплатой больше 300.
         select*from workers where id in(1,8,5,7,9)and login in('ggg','lll','ccc')and salary>300;
