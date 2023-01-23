@@ -112,27 +112,38 @@ package by.tms.models;
         select(date+interval'1 day 2 hour 3 minutes')from workers;
         --При выборке из таблицы workers прибавьте к дате 1день,2часа,3минуты,5секунд.
         select(date+interval'2 hour 3 minute 5 second')from workers;
-        --При выборке из таблицы workers прибавьте к дате 1день и отнимите 2часа.
-        select(date+interval'1 day'-interval'2 hour')from workers;
-        --При выборке из таблицы workers прибавьте к дате 1день и отнимите 2часа,3минуты.
-        select(date+interval'1 day'-interval'2 hour 3 minute')from workers;
-        --На математические операции
-        --При выборке из таблицы workers создайте новое поле res,в котором будет число 3.
-        select 3as res from workers;
-        --При выборке из таблицы workers создайте новое поле res,в котором будет строка'eee'.
-        select'eee'as res from workers;
-        --При выборке из таблицы workers создайте новое поле 3,в котором будет число 3.
-        select 3"3"from workers;
-        --При выборке из таблицы workers создайте новое поле res,в котором будет лежать сумма зарплаты и возраста.
-        select salary,age,(salary+age)as res from workers;
-        --При выборке из таблицы workers создайте новое поле res,в котором будет лежать разность зарплаты и возраста.
-        select salary,age,(salary-age)as res from workers;
-        --При выборке из таблицы workers создайте новое поле res,в котором будет лежать произведение зарплаты и возраста.
-        select salary,age,(salary*age)as res from workers;
-        --При выборке из таблицы workers создайте новое поле res,в котором будет лежать среднее арифметическое зарплаты и возраста.
-        select salary,age,((salary+age)/2)as res from workers;
-        --Выберите из таблицы workers все записи,в которых сумма дня и месяца меньше 10-ти.
-        select*from workers where(extract(day from date)+extract(month from date))< 10;
+--При выборке из таблицы workers прибавьте к дате 1день и отнимите 2часа.
+select(date + interval '1 day'- interval '2 hour')
+from workers;
+--При выборке из таблицы workers прибавьте к дате 1день и отнимите 2часа,3минуты.
+select(date + interval '1 day'- interval '2 hour 3 minute')
+from workers;
+--На математические операции
+--При выборке из таблицы workers создайте новое поле res,в котором будет число 3.
+select 3as res
+from workers;
+--При выборке из таблицы workers создайте новое поле res,в котором будет строка'eee'.
+select 'eee' as res
+from workers;
+--При выборке из таблицы workers создайте новое поле 3,в котором будет число 3.
+select 3 "3"
+from workers;
+--При выборке из таблицы workers создайте новое поле res,в котором будет лежать сумма зарплаты и возраста.
+select salary, age, (salary + age) as res
+from workers;
+--При выборке из таблицы workers создайте новое поле res,в котором будет лежать разность зарплаты и возраста.
+select salary, age, (salary - age) as res
+from workers;
+--При выборке из таблицы workers создайте новое поле res,в котором будет лежать произведение зарплаты и возраста.
+select salary, age, (salary * age) as res
+from workers;
+--При выборке из таблицы workers создайте новое поле res,в котором будет лежать среднее арифметическое зарплаты и возраста.
+select salary, age, ((salary + age) / 2) as res
+from workers;
+--Выберите из таблицы workers все записи,в которых сумма дня и месяца меньше 10-ти.
+select*
+from workers
+where (extract(day from date) + extract(month from date)) < 10;
         --На LEFT,RIGHT,SUBSTRING
         --Для решения задач данного блока вам понадобятся следующие SQL команды и функции:LEFT,RIGHT,SUBSTRING.
         --При выборке из таблицы workers получите первые 5символов поля description.
@@ -154,27 +165,45 @@ package by.tms.models;
         --При выборке из таблицы workers создайте новое поле res,в котором будут лежать одновременно зарплата и возраст через дефис.
         select concat(salary,'-',age)as res from workers;
         --При выборке из таблицы workers получите первые 5символов логина и добавьте троеточие.
-        select concat("left"(login,5),'...')as res from workers;
-        --На GROUP BY
-        --Для решения задач данного блока вам понадобятся следующие SQL команды и функции:GROUP BY.
-        --Найдите самые маленькие зарплаты по группам возрастов(для каждого возраста свою минимальную зарплату).
-        select age,min(salary)from workers group by age order by age;
-        --Найдите самый большой возраст по группам зарплат(для каждой зарплаты свой максимальный возраст).
-        select age,max(salary)from workers group by age order by age;
-        --На GROUP_CONCAT
-        --Для решения задач данного блока вам понадобятся следующие SQL команды и функции:GROUP_CONCAT.
-        --Выберите из таблицы workers уникальные возраста так,чтобы для каждого возраста было поле res,в котором будут лежать через дефис id записей с таким возрастом.
-        select distinct age as res(select group_concat(id'-'))from workers;
-        --На подзапросы
-        --Выберите из таблицы workers все записи,зарплата в которых больше средней зарплаты.
-        select*from workers where salary>(select avg(salary)from workers);
-        --Выберите из таблицы workers все записи,возраст в которых меньше среднего возраста,деленного на 2и умноженного на 3.
-        select*from workers where age< (select(avg(salary)/2*3)from workers);
-        --Выберите из таблицы workers записи с минимальной зарплатой.
-        select*from workers where salary=(select min(salary)from workers);
-        --Выберите из таблицы workers записи с максимальной зарплатой.
-        select*from workers where salary=(select max(salary)from workers);
-        --При выборке из таблицы workers создайте новое поле max,
+select concat("left"(login, 5), '...') as res
+from workers;
+--На GROUP BY
+--Для решения задач данного блока вам понадобятся следующие SQL команды и функции:GROUP BY.
+--Найдите самые маленькие зарплаты по группам возрастов(для каждого возраста свою минимальную зарплату).
+select age, min(salary)
+from workers
+group by age
+order by age;
+--Найдите самый большой возраст по группам зарплат(для каждой зарплаты свой максимальный возраст).
+select age, max(salary)
+from workers
+group by age
+order by age;
+--На GROUP_CONCAT
+--Для решения задач данного блока вам понадобятся следующие SQL команды и функции:GROUP_CONCAT.
+--Выберите из таблицы workers уникальные возраста так,чтобы для каждого возраста было поле res,в котором будут лежать через дефис id записей с таким возрастом.
+select age, array_to_string(array_agg(id), ',')
+from workers
+group by age;
+-- через дефис не очень красиво получается, так как разные возраста в разный ид. Через запятую намного приятней.
+--На подзапросы
+--Выберите из таблицы workers все записи,зарплата в которых больше средней зарплаты.
+select*
+from workers
+where salary > (select avg(salary) from workers);
+--Выберите из таблицы workers все записи,возраст в которых меньше среднего возраста,деленного на 2и умноженного на 3.
+select*
+from workers
+where age < (select(avg(salary) / 2 * 3) from workers);
+--Выберите из таблицы workers записи с минимальной зарплатой.
+select*
+from workers
+where salary = (select min(salary) from workers);
+--Выберите из таблицы workers записи с максимальной зарплатой.
+select*
+from workers
+where salary = (select max(salary) from workers);
+--При выборке из таблицы workers создайте новое поле max,
         --в котором будет лежать максимальное значение зарплаты для возраста 25лет.
         select*,max(salary)as max from workers where age=25group by id,login,salary,age,date,description;
         --При выборке из таблицы workers создайте новое поле avg,
