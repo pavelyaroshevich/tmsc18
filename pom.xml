@@ -56,6 +56,13 @@
             <artifactId>postgresql</artifactId>
             <version>42.5.1</version>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <modules>
@@ -82,5 +89,7 @@
         <module>Lesson20</module>
         <module>Lesson21</module>
         <module>Lesson22</module>
+        <module>Lesson23</module>
+        <module>Lesson24</module>
     </modules>
 </project>
