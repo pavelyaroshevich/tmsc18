@@ -5,14 +5,14 @@ public class Student {
     private String name;
     private String surname;
     private int course;
-    private City cityName;
+    private City city;
 
-    public Student(int id, String name, String surname, int course, City cityName) {
+    public Student(int id, String name, String surname, int course, City city) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.course = course;
-        this.cityName = cityName;
+        this.city = city;
     }
 
     public Student(String name, String surname, int course) {
@@ -54,11 +54,11 @@ public class Student {
     }
 
     public City getCityName() {
-        return cityName;
+        return city;
     }
 
     public void setCityName(City cityName) {
-        this.cityName = cityName;
+        this.city = city;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", course=" + course +
-                ", city='" + cityName + '\'' +
+                ", city='" + city + '\'' +
                 '}';
     }
 }

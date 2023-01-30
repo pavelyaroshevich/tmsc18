@@ -8,5 +8,5 @@ import lombok.*;
 @Setter
 @ToString
 public class City {
-    private String cityName;
+    private String city;
 }
