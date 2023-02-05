@@ -1,6 +1,7 @@
 package by.tms.listner;
 
 import by.tms.repository.JdbcStudentRepository;
+import by.tms.repository.StudentRepository;
 import by.tms.service.StudentService;
 
 import javax.servlet.ServletContextEvent;
@@ -13,26 +14,20 @@ import java.sql.SQLException;
 @WebListener
 public class DBInitContextListener implements ServletContextListener {
     @Override
-    public void contextInitialized(ServletContextEvent sce) {
-        final String dbDriver = "org.postgresql.Driver";
+    public void contextInitialized(final ServletContextEvent sce) {
         String url = sce.getServletContext().getInitParameter("db_url");
         String login = sce.getServletContext().getInitParameter("db_login");
         String password = sce.getServletContext().getInitParameter("db_password");
         try {
-            try {
-                Class.forName(dbDriver);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
+            final String dbDriver = "org.postgresql.Driver";
+            Class.forName(dbDriver);
             Connection connection = DriverManager.getConnection(url, login, password);
-            JdbcStudentRepository jdbcStudentRepository = new JdbcStudentRepository(connection);
+            StudentRepository jdbcStudentRepository = new JdbcStudentRepository(connection);
             StudentService studentService = new StudentService(jdbcStudentRepository);
-            sce.getServletContext().setAttribute("connection", connection);
             sce.getServletContext().setAttribute("studentService", studentService);
-
-        } catch (SQLException e) {
-            System.out.println("Exception" + e.getMessage());
-            ;
+            sce.getServletContext().setAttribute("connection", connection);
+        } catch (Exception e) {
+            System.out.println("Unexpected error " + e.getMessage());
         }
     }
 
@@ -42,7 +37,7 @@ public class DBInitContextListener implements ServletContextListener {
         try {
             connection.close();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("Unexpected error " + e.getMessage());
         }
     }
 }
