@@ -5,10 +5,10 @@
     <title>User Form</title>
 </head>
 <body>
-<form action="calculator" method="POST">
-    Parameter1: <input name="parameter1"/>
+<form action="hello" method="POST">
+    Parametr1: <input name="userparametr1"/>
     <br><br>
-    Parameter2: <input name="parameter2"/>
+    Parametr2: <input name="userparametr2"/>
     <br><br>
     Operation: <select name="operation">
     <option>+</option>

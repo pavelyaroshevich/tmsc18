@@ -5,12 +5,25 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>MainServlet</servlet-name>
-        <servlet-class>MainServlet</servlet-class>
+        <servlet-name>by.tms.servlet.MainServlet</servlet-name>
+        <servlet-class>by.tms.servlet.MainServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>MainServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>by.tms.servlet.MainServlet</servlet-name>
+        <url-pattern>/calculator</url-pattern>
     </servlet-mapping>
+
+    <context-param>
+        <param-name>db_url</param-name>
+        <param-value>jdbc:postgresql://localhost:5432/postgres</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db_user</param-name>
+        <param-value>postgres</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db_password</param-name>
+        <param-value>root</param-value>
+    </context-param>
 </web-app>
