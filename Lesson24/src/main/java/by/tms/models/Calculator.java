@@ -1,3 +1,5 @@
+package by.tms.models;
+
 public class Calculator {
     public double getSum(int a, int b) {
         return a + b;
