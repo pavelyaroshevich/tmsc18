@@ -31,7 +31,8 @@ public class StudentServlet extends HttpServlet {
             getServletContext().getRequestDispatcher("/students.jsp").forward(req, resp);
             resp.sendRedirect("/db");
         } catch (ServletException e) {
-            throw new RuntimeException(e);
+            System.out.println("Unexpected error " + e.getMessage());
+            ;
         }
     }
 }

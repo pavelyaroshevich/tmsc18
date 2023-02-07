@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>User Form</title>
+    <title>Calculator</title>
 </head>
 <body>
 <form action="calculator" method="POST">
