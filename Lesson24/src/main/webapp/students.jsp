@@ -18,7 +18,7 @@
         <th>Course</th>
     </tr>
     <%
-        List<Student> students = (List<Student>) request.getAttribute("data");
+        List<Student> students = (List<Student>) request.getAttribute("students");
         for (Student student : students) {
     %>
     <tr>
