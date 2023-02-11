@@ -32,7 +32,6 @@ public class StudentServlet extends HttpServlet {
             resp.sendRedirect("/db");
         } catch (ServletException e) {
             System.out.println("Unexpected error " + e.getMessage());
-            ;
         }
     }
 }

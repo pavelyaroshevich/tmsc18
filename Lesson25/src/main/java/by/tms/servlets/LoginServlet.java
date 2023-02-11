@@ -1,5 +1,6 @@
 package by.tms.servlets;
 
+import by.tms.models.User;
 import by.tms.services.UserAware;
 
 import javax.servlet.RequestDispatcher;
@@ -15,7 +16,7 @@ import java.io.IOException;
 @WebServlet(value = "/login")
 public class LoginServlet extends HttpServlet {
     private UserAware userService;
-    private static Object access = null;
+    private User user;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -25,10 +26,11 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        if (access != null) {
-            getRedirect(request, response, "/menu.jsp");
+        HttpSession session = request.getSession();
+        if (session.getAttribute("accessUser") != null) {
+            forwardTo(request, response, "/menu.jsp");
         } else {
-            getRedirect(request, response, "/login.jsp");
+            forwardTo(request, response, "/login.jsp");
         }
     }
 
@@ -38,15 +40,14 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         if (userService.isVerifyUser(login, password)) {
             HttpSession session = req.getSession();
-            access = new Object();
-            session.setAttribute("accessPermission", access);
-            getRedirect(req, resp, "/menu.jsp");
+            session.setAttribute("accessUser", new User("123", "123"));
+            forwardTo(req, resp, "/menu.jsp");
         } else {
-            getRedirect(req, resp, "/login.jsp");
+            forwardTo(req, resp, "/login.jsp");
         }
     }
 
-    private void getRedirect(HttpServletRequest req, HttpServletResponse resp, String address) throws ServletException, IOException {
+    private void forwardTo(HttpServletRequest req, HttpServletResponse resp, String address) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher(address);
         requestDispatcher.forward(req, resp);
     }
