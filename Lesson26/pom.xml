@@ -6,9 +6,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>Lesson25</artifactId>
+    <artifactId>Lesson26</artifactId>
     <packaging>war</packaging>
-    <name>Lesson25 Maven Webapp</name>
+    <name>Lesson26 Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -19,7 +19,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>Lesson25</finalName>
+        <finalName>Lesson26</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
