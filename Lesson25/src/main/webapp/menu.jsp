@@ -12,7 +12,6 @@
 </head>
 <body>
 <h1>hello user</h1>
-<a href="/login">logout</a>
 
 </body>
 </html>
