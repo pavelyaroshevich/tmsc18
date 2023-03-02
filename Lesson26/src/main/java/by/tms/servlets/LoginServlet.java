@@ -1,4 +1,4 @@
-package by.tms.servlets;
+package by.tms.servlet;
 
 import by.tms.models.User;
 import by.tms.services.UserAware;
@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(value = "/login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+
     private UserAware userService;
 
     @Override
@@ -24,23 +25,23 @@ public class LoginServlet extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        HttpSession session = request.getSession();
-        if (session.getAttribute("accessUser") != null) {
-            forwardTo(request, response, "/menu.jsp");
-        } else {
-            forwardTo(request, response, "/login.jsp");
-        }
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         if (userService.isVerifyUser(login, password)) {
             HttpSession session = req.getSession();
             session.setAttribute("accessUser", new User(login, password));
-            forwardTo(req, resp, "/menu.jsp");
+            forwardTo(req, resp, "/form.jsp");
+        } else {
+            forwardTo(req, resp, "/login.jsp");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        if (session.getAttribute("accessUser") != null) {
+            forwardTo(req, resp, "/form.jsp");
         } else {
             forwardTo(req, resp, "/login.jsp");
         }
