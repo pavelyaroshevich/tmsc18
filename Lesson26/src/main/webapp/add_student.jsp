@@ -18,7 +18,7 @@
             <label>Student surname</label>
         </div>
         <div class="user-box">
-            <input type="text" name="course" required="">
+            <input type="number" name="course" required="">
             <label>Student course</label>
         </div>
         <div>
