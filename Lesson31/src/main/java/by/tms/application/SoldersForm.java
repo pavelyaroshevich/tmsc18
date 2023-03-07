@@ -14,7 +14,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SoldersForm {
-    private SoldersFactory soldersFactory;
     private Archer archer;
     private Magician magician;
     private Warrior warrior;
