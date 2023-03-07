@@ -8,7 +8,11 @@ import by.tms.factory.SoldersFactory;
 public class Application {
     private SoldersForm soldersForm;
 
-    public void createSoldersForm(String name) {
+    public void createSoldersForm(String name, String solder) {
+        getFactory(name, solder);
+    }
+
+    private void getFactory(String name, String solder) {
         SoldersFactory soldersFactory;
         switch (name) {
             case "орк" -> soldersFactory = new OrcFactory();
@@ -20,11 +24,22 @@ public class Application {
             }
         }
         soldersForm = new SoldersForm(soldersFactory);
+        getSolder(solder);
+    }
+
+    private void getSolder(String name) {
+        switch (name) {
+            case "воин" -> soldersForm.getWarrior().action();
+            case "маг" -> soldersForm.getMagician().action();
+            case "лучник" -> soldersForm.getArcher().action();
+            default -> {
+                System.out.println("Unknown solder");
+            }
+        }
     }
 
     public static void main(String[] args) {
         Application application = new Application();
-        application.createSoldersForm("орк");
-
+        application.createSoldersForm("орк", "маг");
     }
 }
