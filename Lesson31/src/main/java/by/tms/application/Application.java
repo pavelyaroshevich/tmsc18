@@ -9,10 +9,10 @@ public class Application {
     private SoldersForm soldersForm;
 
     public void createSoldersForm(String name, String solder) {
-        getFactory(name, solder);
+        createFactory(name, solder);
     }
 
-    private void getFactory(String name, String solder) {
+    private void createFactory(String name, String solder) {
         SoldersFactory soldersFactory;
         switch (name) {
             case "орк" -> soldersFactory = new OrcFactory();
@@ -24,10 +24,10 @@ public class Application {
             }
         }
         soldersForm = new SoldersForm(soldersFactory);
-        getSolder(solder);
+        action(solder);
     }
 
-    private void getSolder(String name) {
+    private void action(String name) {
         switch (name) {
             case "воин" -> soldersForm.getWarrior().action();
             case "маг" -> soldersForm.getMagician().action();
